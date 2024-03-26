@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashScreenActivity">
+
+
+    <activity
+        android:id="@+id/splashScreenActivity"
+        android:name="com.example.myapplication.SplashScreenActivity"
+        android:label="splash_screen"
+        tools:layout="@layout/splash_screen">
+        <action
+            android:id="@+id/splash_to_onb1"
+            app:destination="@id/onboard1Activity"
+            />
+    </activity>
+
+    <activity
+        android:id="@+id/onboard1Activity"
+        android:name="com.example.myapplication.Onboard1Activity"
+        android:label="onboard1"
+        tools:layout="@layout/onboard1">
+        <action
+            android:id="@+id/onb1_to_onb2"
+            app:destination="@id/onboard2Activity"
+            />
+        <action
+            android:id="@+id/skip"
+            app:destination="@id/onboard3Activity"
+            />
+    </activity>
+
+
+    <activity
+        android:id="@+id/onboard2Activity"
+        android:name="com.example.myapplication.Onboard2Activity"
+        android:label="onboard2"
+        tools:layout="@layout/onboard2">
+        <action
+            android:id="@+id/onb2_to_onb3"
+            app:destination="@id/onboard3Activity"
+            />
+        <action
+            android:id="@+id/skip"
+            app:destination="@id/onboard3Activity"
+            />
+    </activity>
+
+    <activity
+        android:id="@+id/onboard3Activity"
+        android:name="com.example.myapplication.Onboard3Activity"
+        android:label="onboard3"
+        tools:layout="@layout/onboard3">
+    </activity>
+
+</navigation>

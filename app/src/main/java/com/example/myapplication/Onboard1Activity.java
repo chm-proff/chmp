@@ -11,27 +11,33 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class Onboard1Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.splash_screen);
+        setContentView(R.layout.onboard1);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
-        ImageButton redi = findViewById(R.id.imageView);
+        ImageButton redi = findViewById(R.id.button);
         redi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Onboard1Activity.class);
+                Intent intent = new Intent(Onboard1Activity.this, Onboard3Activity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton redi1 = findViewById(R.id.button2);
+        redi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Onboard1Activity.this, Onboard3Activity.class);
                 startActivity(intent);
             }
         });
     }
-
 }
