@@ -22,6 +22,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+
         });
 //        ImageButton b = findViewById(R.id.imageButton3);
 //        b.setOnClickListener(new View.OnClickListener() {
