@@ -31,5 +31,13 @@ public class Onboard2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton redi1 = findViewById(R.id.button2);
+        redi1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Onboard2Activity.this, Onboard3Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
